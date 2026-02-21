@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blindness</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;600;700&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="startScreen" class="overlay">
+        <div class="screen-content">
+            <h1>BLINDNESS</h1>
+            <p>Find 3 keys, then reach the door.</p>
+            <div class="controls-hint">
+                <div class="key-row">
+                    <div class="key">W</div>
+                    <div class="key">↑</div>
+                </div>
+                <div class="key-row">
+                    <div class="key">A</div>
+                    <div class="key">←</div>
+                    <div class="key">S</div>
+                    <div class="key">↓</div>
+                    <div class="key">D</div>
+                    <div class="key">→</div>
+                </div>
+            </div>
+            <button id="startBtn" class="btn-primary">START</button>
+        </div>
+    </div>
+
+    <div id="levelCompleteScreen" class="overlay hidden">
+        <div class="screen-content">
+            <h2>Level Complete</h2>
+            <button id="nextLevelBtn" class="btn-primary">Play Next Level</button>
+        </div>
+    </div>
+
+    <div id="winScreen" class="overlay hidden">
+        <div class="screen-content">
+            <h2>You Win!</h2>
+            <div id="winStats">
+                <p>Total Score: <span id="totalScore">0</span></p>
+                <p>Total Time: <span id="totalTime">0</span>s</p>
+                <p>Max Possible Score: <span id="maxScore">0</span></p>
+            </div>
+            <button id="playAgainBtn" class="btn-primary">Play Again</button>
+        </div>
+    </div>
+
+    <div id="videoScreen" class="overlay hidden">
+        <div class="video-wrapper">
+            <video id="introVideo" src="assets/video/Intro_video.mp4" autoplay></video>
+        </div>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
